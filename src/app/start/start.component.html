@@ -1,0 +1,23 @@
+<h2>The Game</h2>
+<p>
+  You are taking a trip on the Coast Starlight train. There is a murder.  Solve the murder!
+</p>
+<h3>How to win</h3>
+<p>
+  You have a certain number of likeability points at the beginning. As you interact with other characters and everyone tries to solve the mystery, you can gain or lose likeability points. You must solve the mystery before your likeability points get too low with all players or they will decide you are the murderer and literally throw you off the train TO DEATH.
+</p>
+
+<h3>Create your player</h3>
+<label for="name">Name</label>
+<input type="text" id="name" #name required>
+
+<label for="character">Character</label>
+<select class="form-control" id="character">
+  <option value="detective">Detective</option>
+  <option value="librarian">Librarian</option>
+  <option value="firefighter">Firefighter</option>
+  <option value="teacher">Teacher</option>
+</select>
+
+
+<button routerLink="scene1" (click)="createPlayer()">Start Game</button>
