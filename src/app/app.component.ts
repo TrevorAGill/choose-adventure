@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Player } from './player.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  masterPlayer: Player;
+
+  @Input() newPlayerFromChild: Player;
+  // @Output() playerSender = new EventEmitter();
+
   title = 'Murder on the Coast Starlight';
+
+  addPlayer(newPlayerFromChild: Player) {
+    this.masterPlayer = newPlayerFromChild;
+  }
 }

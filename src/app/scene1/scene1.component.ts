@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Player } from '../player.model';
 
 @Component({
@@ -7,6 +7,9 @@ import { Player } from '../player.model';
   styleUrls: ['./scene1.component.css']
 })
 export class Scene1Component implements OnInit {
+  // currentPlayer: Player;
+  @Input() currentPlayer: Player;
+  // currentPlayer: Player = this.childPlayer;
 
   constructor() { }
 

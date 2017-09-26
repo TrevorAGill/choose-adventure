@@ -17,7 +17,7 @@ export class StartComponent implements OnInit {
 
   createPlayer(name: string, role: string) {
     var newPlayer: Player = new Player(name,role);
-    this.n
+    this.newPlayerSender.emit(newPlayer);
   }
 
 }
